@@ -84,7 +84,7 @@ export default function Footer() {
       icon: IEEEIcon
     },
     {
-      title: "Official Email",
+      title: "Email",
       handle: personalInfo.email,
       href: `mailto:${personalInfo.email}`,
       icon: Mail

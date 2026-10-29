@@ -36,8 +36,7 @@ export const personalInfo = {
 
   profileImage: "/images/prof-venkateswara-rao.png",
   googleScriptUrl: import.meta.env.VITE_GOOGLE_SCRIPT_URL || "",
-  email: "chairman@aiienscampus.in",
-  alternateEmail: "tumativrao@gmail.com",
+  email: "tumativrao@gmail.com",
   phone: "+91 94401 54728",
   
   socials: {

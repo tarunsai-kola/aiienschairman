@@ -80,14 +80,14 @@ export default function Contact() {
                 {/* Channel List */}
                 <div className="mt-6 space-y-3.5">
                   
-                  {/* Primary Email */}
+                  {/* Direct Academic Email */}
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 rounded-xl bg-slate-950/80 border border-white/10 hover:border-cyan-400/40 transition-colors">
                     <div className="flex items-center gap-3">
                       <div className="grid size-9 place-items-center rounded-lg bg-cyan-500/10 text-cyan-400 shrink-0 border border-cyan-500/20">
                         <Mail className="size-4" />
                       </div>
                       <div className="min-w-0">
-                        <span className="block text-[10px] font-mono text-slate-400 uppercase tracking-wider">Official Email</span>
+                        <span className="block text-[10px] font-mono text-slate-400 uppercase tracking-wider">Email Address</span>
                         <a href={`mailto:${personalInfo.email}`} className="block truncate font-mono text-xs sm:text-sm font-semibold text-white hover:text-cyan-400 transition-colors">
                           {personalInfo.email}
                         </a>
@@ -111,29 +111,6 @@ export default function Contact() {
                       </a>
                     </div>
                   </div>
-
-                  {/* Alternate Academic Email */}
-                  {personalInfo.alternateEmail && (
-                    <div className="flex items-center justify-between gap-3 p-3.5 rounded-xl bg-slate-950/80 border border-white/10 hover:border-cyan-400/40 transition-colors">
-                      <div className="flex items-center gap-3">
-                        <div className="grid size-9 place-items-center rounded-lg bg-cyan-500/10 text-cyan-400 shrink-0 border border-cyan-500/20">
-                          <Mail className="size-4" />
-                        </div>
-                        <div className="min-w-0">
-                          <span className="block text-[10px] font-mono text-slate-400 uppercase tracking-wider">Alternate Academic</span>
-                          <a href={`mailto:${personalInfo.alternateEmail}`} className="block truncate font-mono text-xs sm:text-sm text-slate-300 hover:text-cyan-400 transition-colors">
-                            {personalInfo.alternateEmail}
-                          </a>
-                        </div>
-                      </div>
-                      <a
-                        href={`mailto:${personalInfo.alternateEmail}`}
-                        className="text-xs font-mono text-slate-400 hover:text-white transition-colors"
-                      >
-                        Write
-                      </a>
-                    </div>
-                  )}
 
                   {/* Direct Phone */}
                   <div className="flex items-center justify-between gap-3 p-3.5 rounded-xl bg-slate-950/80 border border-white/10 hover:border-cyan-400/40 transition-colors">

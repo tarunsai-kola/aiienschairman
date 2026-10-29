@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowDown, Award, BookOpen, Compass, CheckCircle2 } from 'lucide-react';
+import { ArrowDown, Award, ExternalLink, Sparkles, GraduationCap } from 'lucide-react';
 import { personalInfo, aiiensBrand } from '../data/portfolioData';
 
 export default function Hero({ onSelectInitiative }) {
@@ -73,40 +73,116 @@ export default function Hero({ onSelectInitiative }) {
           <span className="text-slate-300">BITS PILANI ALUMNUS</span>
         </div>
 
-        {/* Master Card Display Frame */}
+        {/* Master Showcase: AIIENS Campus Flagship Card */}
         <div className="relative w-full max-w-4xl group">
-          {/* Ambient Cyan Halo Glow */}
-          <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-gradient-to-r from-cyan-500/30 via-blue-600/20 to-cyan-500/30 blur-2xl opacity-70 transition-opacity duration-700 group-hover:opacity-90" />
+          {/* Ambient Royal Navy & Cyan Halo Glow */}
+          <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-gradient-to-r from-blue-600/35 via-cyan-500/30 to-blue-600/35 blur-2xl opacity-75 transition-opacity duration-700 group-hover:opacity-100" />
 
-          {/* Pristine Card Enclosure */}
-          <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white/20 bg-slate-950 shadow-2xl ring-1 ring-white/10 transition-transform duration-700 group-hover:scale-[1.01]">
-            <img
-              src={aiiensBrand.masterCard}
-              alt="AIIENS Master Brand — Build Something Useful"
-              className="w-full aspect-[16/9] object-cover rounded-2xl sm:rounded-3xl"
-            />
-            {/* Dynamic Chairman Overlay Badge */}
-            <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-col sm:flex-row items-center justify-between gap-3 rounded-2xl bg-slate-950/90 backdrop-blur-md p-3.5 sm:p-4 border border-white/15 shadow-2xl">
-              <div className="text-left">
+          {/* Pristine Pleated AIIENS Campus Showcase Enclosure */}
+          <div className="campus-hero-banner relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white/20 p-5 sm:p-9 md:p-11 text-center transition-transform duration-700 group-hover:scale-[1.008]">
+            
+            {/* Ambient Lighting Beam */}
+            <div className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-48 bg-cyan-400/20 blur-3xl rounded-full" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent" />
+
+            {/* Top Brand Identity Bar */}
+            <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 mb-5 sm:mb-7 pb-4 border-b border-white/10">
+              <a
+                href="https://www.aiienscampus.in"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="flex items-center gap-2.5 sm:gap-3 group/brand transition-transform hover:scale-[1.02]"
+              >
+                <div className="size-9 sm:size-11 rounded-xl bg-white p-1.5 shadow-xl border border-white/40 flex items-center justify-center shrink-0">
+                  <img
+                    src="/images/brand/aiiens-campus.png"
+                    alt="AIIENS Campus Logo"
+                    className="size-full object-contain"
+                  />
+                </div>
+                <div className="text-left">
+                  <span className="block font-display text-base sm:text-xl font-extrabold text-white tracking-tight">
+                    Aiiens Campus
+                  </span>
+                  <span className="block font-mono text-[9px] sm:text-[10px] text-cyan-300 uppercase tracking-widest">
+                    aiienscampus.in
+                  </span>
+                </div>
+              </a>
+
+              <div className="flex items-center gap-2 font-mono text-[10px] sm:text-xs text-cyan-300 bg-cyan-500/10 px-3 py-1.5 rounded-full border border-cyan-500/30 backdrop-blur-sm shadow-[0_0_15px_rgba(0,240,255,0.15)]">
+                <span className="size-2 rounded-full bg-cyan-400 animate-pulse" />
+                <span className="uppercase tracking-wider font-semibold">FLAGSHIP ACADEMIC INITIATIVE</span>
+              </div>
+            </div>
+
+            {/* Core AIIENS Campus Signature Typography */}
+            <div className="relative z-10 space-y-2.5 sm:space-y-3.5 my-3 sm:my-5">
+              <p className="font-serif-italic text-2xl sm:text-4xl md:text-5xl text-slate-100 font-normal tracking-tight drop-shadow-md">
+                Engineering Education, Upgraded.
+              </p>
+              
+              <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight bg-gradient-to-b from-white via-slate-100 to-cyan-100 bg-clip-text text-transparent drop-shadow-[0_12px_35px_rgba(0,0,0,0.85)]">
+                Career Ready.
+              </h1>
+
+              <p className="text-xs sm:text-base text-slate-200 max-w-2xl mx-auto leading-relaxed font-normal pt-1 px-2">
+                We partner with engineering colleges to build structured, semester-wise industry-readiness programs.
+              </p>
+            </div>
+
+            {/* Strategic Pillars */}
+            <div className="relative z-10 pt-3 pb-5 flex flex-wrap items-center justify-center gap-2 sm:gap-2.5">
+              {[
+                'Project-First Engineering',
+                'Outcome-Based Pedagogy',
+                'Expert Mentorship Sprints',
+                'Autonomous Placement Pathways'
+              ].map((pill, i) => (
+                <span
+                  key={i}
+                  className="rounded-lg bg-slate-950/75 border border-white/10 px-2.5 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-mono text-slate-300 backdrop-blur-sm"
+                >
+                  <span className="text-cyan-400 mr-1.5">•</span>
+                  {pill}
+                </span>
+              ))}
+            </div>
+
+            {/* Chairman Governance Footer Ribbon inside card */}
+            <div className="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 rounded-xl sm:rounded-2xl bg-slate-950/90 backdrop-blur-md p-3.5 sm:p-4 border border-white/15 shadow-2xl">
+              <div className="text-center sm:text-left">
                 <p className="font-mono text-[10px] sm:text-xs text-cyan-400 font-bold uppercase tracking-widest">
                   INSTITUTIONAL GOVERNANCE // AIIENS CAMPUS
                 </p>
-                <h3 className="text-sm sm:text-lg font-bold text-white tracking-tight">
+                <h3 className="text-sm sm:text-base font-bold text-white tracking-tight mt-0.5">
                   Prof. Tumati Venkateswara Rao <span className="font-mono text-xs text-slate-400 font-normal">| Chairman</span>
                 </h3>
               </div>
-              <div className="flex items-center gap-2 font-mono text-[11px] text-cyan-300 bg-cyan-500/10 px-3 py-1.5 rounded-xl border border-cyan-500/20">
-                <Award className="size-3.5 text-cyan-400" />
-                <span>NBA • NAAC 'A' • AUTONOMOUS LEADER</span>
+              <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
+                <div className="hidden md:flex items-center gap-2 font-mono text-[11px] text-cyan-300 bg-cyan-500/10 px-3 py-1.5 rounded-xl border border-cyan-500/20">
+                  <Award className="size-3.5 text-cyan-400" />
+                  <span>NBA • NAAC 'A' • AUTONOMOUS LEADER</span>
+                </div>
+                <a
+                  href="https://www.aiienscampus.in"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="inline-flex items-center gap-2 rounded-xl bg-cyan-400 px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider text-black hover:bg-white hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all cursor-pointer"
+                >
+                  <span>Explore AIIENS Campus</span>
+                  <ExternalLink className="size-3.5" />
+                </a>
               </div>
             </div>
+
           </div>
 
           {/* Minimalist Progress Indicator beneath card */}
           <div className="mt-4 mx-auto w-full max-w-md">
             <div className="relative h-1 w-full overflow-hidden rounded-full bg-white/10">
               <div 
-                className="h-full bg-gradient-to-r from-cyan-500 to-cyan-300 transition-all duration-75 ease-linear shadow-[0_0_10px_rgba(0,240,255,0.8)]"
+                className="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-300 transition-all duration-75 ease-linear shadow-[0_0_10px_rgba(0,240,255,0.8)]"
                 style={{ width: `${progress}%` }}
               />
             </div>
