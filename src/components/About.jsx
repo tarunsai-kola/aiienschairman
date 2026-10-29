@@ -16,26 +16,6 @@ export default function About() {
               className="object-cover object-center w-full h-full transition-transform duration-700 group-hover:scale-102"
               src={personalInfo.profileImage}
             />
-            {/* Ambient subtle glow overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
-            
-            {/* Location & Status Pill */}
-            <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-slate-950/90 backdrop-blur-md p-3.5 border border-white/15 shadow-2xl flex flex-col gap-2">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-1.5 text-xs font-semibold text-white">
-                  <MapPin className="size-3.5 text-cyan-400" />
-                  <span>{personalInfo.location}</span>
-                </div>
-                <div className="flex items-center gap-1.5 text-[11px] font-mono text-cyan-400 uppercase tracking-wider font-bold">
-                  <span className="size-2 rounded-full bg-cyan-400 animate-pulse" />
-                  <span>CHAIRMAN // AIIENS CAMPUS</span>
-                </div>
-              </div>
-              <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-slate-400">
-                <span>Dr. T. Venkateswara Rao</span>
-                <span className="text-cyan-300">PhD(AU) • PhD(JNTUK)</span>
-              </div>
-            </div>
           </div>
 
           {/* Narrative & Details */}
